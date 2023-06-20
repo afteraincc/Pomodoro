@@ -28,6 +28,10 @@
 
 	- 先安装[Node.js](https://nodejs.org/en/download)
 	
+	- 安装依赖
+
+		`npm install`
+	
 	- 构建
 
 		`npm run build`
