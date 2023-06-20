@@ -86,7 +86,7 @@ export default NotifyPluginXXX
 
 ![](hardware/Pomodoro.png)
 
-![](hardware/PCB.pdf)
+![](hardware/PCB.png)
 
 ### 外壳（3d-model目录）
 
