@@ -109,3 +109,15 @@ bool Cube::isBreakFace()
 
     return true;
 }
+
+int Cube::currentFaceId()
+{
+    if (isWorkFace())
+        return 2;
+    else if (isIdleFace())
+        return 3;
+    else if (isBreakFace())
+        return 5;
+
+    return 0;
+}

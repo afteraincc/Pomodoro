@@ -23,6 +23,7 @@ static uint32_t timeoutRetryCount = 3; // 超时通知重试次数(秒数)，确
 static LoopTicker loopTicker(5, 10, 1);
 
 static Cube cube;
+static int preFaceId = 0;
 
 void echoSystemInfo()
 {
@@ -302,6 +303,13 @@ void triggerHandle()
 
   if (!pomodoroBLE->clientConnected())
     return;
+
+  // fixbug: sometimes get corrupt data => try twice
+  if (cube.currentFaceId() != preFaceId)
+  {
+    preFaceId = cube.currentFaceId();
+    return;
+  }
 
   if (cube.isWorkFace() || workTriggerOn())
     workTriggerHandle();

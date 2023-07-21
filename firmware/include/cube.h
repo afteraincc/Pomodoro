@@ -12,6 +12,11 @@ public:
     bool isWorkFace();
     bool isIdleFace();
     bool isBreakFace();
+    // dice
+    // 1: front, 6: back
+    // 2: left(work face), 5: right(break face)
+    // 3: top(idle face), 4: bottom
+    int currentFaceId();
 
     bool readYawPitchRoll();
     int getYaw();
