@@ -4,7 +4,6 @@ document.title = 'Pomodoro Client'
 <script>
 import StatusParser from '../pomodoro-parser.js'
 import NotifyPluginManager from '../notify-plugin-manager.js'
-import { parserOptions } from '@vue/compiler-dom';
 
 export default {
   data() {
